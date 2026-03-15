@@ -43,7 +43,7 @@ export default function About({
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl about-image bg-neutral-100 border border-neutral-200">
           <Image
-            src="/logo/tui.jpg"
+            src="/logo/tui.JPG"
             alt="About the photographer"
             layout="fill"
             objectFit="cover"
