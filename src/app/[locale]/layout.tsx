@@ -60,7 +60,7 @@ export default async function RootLayout({
       lang={locale}
       className={`${playfair.variable} ${gloock.variable} ${outfit.variable}`}
     >
-      <body className="antialiased min-h-screen cursor-none">
+      <body className="antialiased min-h-screen">
         <NextIntlClientProvider messages={messages}>
           <LogoIntro />
           <CustomCursor />
