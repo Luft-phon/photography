@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+
+# next.js
+.next
+out
+
+# logs
+*.log
+
+# env
+.env*
+
+# typescript
+*.tsbuildinfo
+
+# misc
+.DS_Store
+node_modules
+.next
+.env
+*.log
+build*.log
+tsconfig.tsbuildinfo

@@ -1,0 +1,50 @@
+{
+  "Hero": {
+    "title": "LUFTPHON",
+    "subtitle": "A visual journey through my lens."
+  },
+  "Gallery": {
+    "title": "Photo",
+    "subtitle": "Concept"
+  },
+  "Homepage": {
+    "prewedding": "Pre-wedding",
+    "muse": "Muse",
+    "aodai": "Ao Dai",
+    "portrait": "Portrait",
+    "xmas": "Christmas",
+    "couple": "Couple"
+  },
+  "Collaborate": {
+    "title": "Let's create",
+    "subtitle": "together",
+    "button": "Get in touch"
+  },
+  "Navigation": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact",
+    "switchLang": "VI"
+  },
+  "About": {
+    "title": "Behind the",
+    "subtitle": "Lens",
+    "description1": "I capture the raw emotions and fleeting moments of the world around me. With a background in design, I approach every shoot with a blend of structural rigor and organic spontaneity.",
+    "description2": "Whether it's the chaotic beauty of an urban landscape or the quiet intimacy of a personal portrait, my goal is always to tell a story that words cannot.",
+    "description": "Exhibitions",
+    "description3": "Working",
+    "description4": "Learning",
+    "description5": "Newbie"
+  },
+  "Contact": {
+    "title": "Say",
+    "subtitle": "Hello",
+    "description1": "Available for freelance work,",
+    "description2": "collaborations, and creative projects worldwide.",
+    "namePlaceholder": "YOUR NAME",
+    "emailPlaceholder": "YOUR EMAIL",
+    "messagePlaceholder": "YOUR MESSAGE",
+    "sendMessage": "Send Message"
+  }
+}

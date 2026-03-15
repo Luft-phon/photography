@@ -1,0 +1,50 @@
+{
+  "Hero": {
+    "title": "LUFTPHON",
+    "subtitle": "Một hành trình thị giác qua ống kính của tôi."
+  },
+  "Gallery": {
+    "title": "Concept",
+    "subtitle": "Chụp"
+  },
+  "Homepage": {
+    "prewedding": "Pre-wedding",
+    "muse": "Nàng thơ",
+    "aodai": "Áo dài",
+    "portrait": "Chân dung",
+    "xmas": "Giáng Sinh",
+    "couple": "Cặp đôi"
+  },
+  "Collaborate": {
+    "title": "Cùng nhau",
+    "subtitle": "sáng tạo",
+    "button": "Liên hệ ngay"
+  },
+  "Navigation": {
+    "home": "Trang Chủ",
+    "gallery": "Thư Viện",
+    "about": "Giới Thiệu",
+    "contact": "Liên Hệ",
+    "switchLang": "EN"
+  },
+  "About": {
+    "title": "Phía sau",
+    "subtitle": "Ống Kính",
+    "description1": "Mình ghi lại những cảm xúc chân thật và khoảnh khắc thoáng qua của thế giới xung quanh. Với nền tảng trong thiết kế, mình tiếp cận mỗi buổi chụp ảnh với sự pha trộn giữa tính chuẩn mực cấu trúc và sự ngẫu hứng tự nhiên.",
+    "description2": "Dù đó là vẻ đẹp ngổn ngang của một phong cảnh đô thị hay sự thân mật tĩnh lặng của một bức chân dung cá nhân, mục tiêu của mình luôn là kể một câu chuyện mà ngôn từ không thể lột tả.",
+    "description": "Giai đoạn",
+    "description3": "Làm nghề",
+    "description4": "Học hỏi",
+    "description5": "Mới vào nghề"
+  },
+  "Contact": {
+    "title": "Say",
+    "subtitle": "Hello",
+    "description1": "Available for freelance work,",
+    "description2": "collaborations, and creative projects worldwide.",
+    "namePlaceholder": "YOUR NAME",
+    "emailPlaceholder": "YOUR EMAIL",
+    "messagePlaceholder": "YOUR MESSAGE",
+    "sendMessage": "Send Message"
+  }
+}
