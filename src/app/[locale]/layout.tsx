@@ -14,6 +14,7 @@ import { Outfit } from "next/font/google";
 import { Poppins } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { Gloock } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 // 1. Configure the primary font (Playfair Display)
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -68,6 +69,7 @@ export default async function RootLayout({
           <SmoothScrolling>
             <Navbar />
             {children}
+            <Analytics />
           </SmoothScrolling>
         </NextIntlClientProvider>
       </body>
