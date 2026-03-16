@@ -171,13 +171,13 @@ export default function Home({
         <h2 className="text-5xl md:text-8xl font-bold uppercase mb-8 text-neutral-900">
           {tCollab('title')} <br /> <span className="text-neutral-400">{tCollab('subtitle')}</span>
         </h2>
-        <a
+        <Link
           href="/contact"
           className="relative px-8 py-4 bg-neutral-900 text-white text-xl font-medium rounded-full overflow-hidden group hover:shadow-lg transition-shadow"
         >
           <span className="relative z-10 transition-colors group-hover:text-black">{tCollab('button')}</span>
           <div className="absolute inset-0 bg-white transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></div>
-        </a>
+        </Link>
       </section>
     </main>
   );
