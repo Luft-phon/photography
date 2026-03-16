@@ -81,7 +81,7 @@ export default function Home({
         <div className="relative h-screen flex flex-col pb-24 z-10 w-full px-8 md:px-16 text-left items-start justify-end">
           <h1
             ref={heroTextRef}
-            className="font-gloock text-6xl md:text-8xl uppercase font-bold tracking-tighter mix-blend-difference text-white"
+            className="font-gloock text-6xl md:text-8xl uppercase font-bold tracking-tighter mix-blend-difference text-black md:text-white"
           >
             {t('title')} <br />
             {/* <span className="text-white-900">Photo</span> */}
@@ -91,7 +91,7 @@ export default function Home({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="mt-8 text-lg md:text-2xl font-medium mix-blend-difference text-white"
+            className="mt-8 text-lg md:text-2xl font-medium mix-blend-difference text-black md:text-white"
           >
             {t('subtitle')}
           </motion.p>
@@ -117,9 +117,10 @@ export default function Home({
                 objectFit="cover"
                 className="transition-transform duration-1000 group-hover:scale-110"
               />
-              <Link href="/gallery/muse"><div className="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-50 transition-opacity duration-500 flex items-end p-8">
-                <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('muse')}</h3>
-              </div></Link>
+              <Link href="/gallery/muse">
+                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
+                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('muse')}</h3>
+                </div></Link>
 
             </div>
             <div className="gallery-item relative aspect-[3/4] md:mt-32 w-full group overflow-hidden bg-neutral-100 rounded-sm">
@@ -130,9 +131,10 @@ export default function Home({
                 objectFit="cover"
                 className="transition-transform duration-1000 group-hover:scale-110"
               />
-              <Link href="/gallery/prewedding"><div className="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-50 transition-opacity duration-500 flex items-end p-8">
-                <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('prewedding')}</h3>
-              </div></Link>
+              <Link href="/gallery/prewedding">
+                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
+                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('prewedding')}</h3>
+                </div></Link>
             </div>
             <div className="gallery-item relative aspect-[3/4] w-full group overflow-hidden bg-neutral-100 rounded-sm">
               <Image
@@ -142,9 +144,10 @@ export default function Home({
                 objectFit="cover"
                 className="transition-transform duration-1000 group-hover:scale-110"
               />
-              <Link href="/gallery/aodai"><div className="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('aodai')}</h3>
-              </div></Link>
+              <Link href="/gallery/aodai">
+                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
+                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('aodai')}</h3>
+                </div></Link>
             </div>
             <div className="gallery-item relative aspect-[3/4] md:mt-32 w-full group overflow-hidden bg-neutral-100 rounded-sm">
               <Image
@@ -154,9 +157,10 @@ export default function Home({
                 objectFit="cover"
                 className="transition-transform duration-1000 group-hover:scale-110"
               />
-              <Link href="/gallery/xmas"><div className="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('xmas')}</h3>
-              </div></Link>
+              <Link href="/gallery/xmas">
+                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
+                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('xmas')}</h3>
+                </div></Link>
             </div>
           </div>
         </div>
