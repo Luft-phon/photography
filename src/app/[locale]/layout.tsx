@@ -6,7 +6,6 @@ import {routing} from '@/i18n/routing';
 
 import Navbar from "@/components/Navbar";
 import SmoothScrolling from "@/components/SmoothScrolling";
-import CustomCursor from "@/components/CustomCursor";
 import LogoIntro from "@/components/LogoIntro";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -64,7 +63,6 @@ export default async function RootLayout({
       <body className="antialiased min-h-screen">
         <NextIntlClientProvider messages={messages}>
           <LogoIntro />
-          <CustomCursor />
           <ScrollToTop />
           <SmoothScrolling>
             <Navbar />

@@ -104,9 +104,12 @@ export default function Home({
         className="relative w-full min-h-screen bg-white py-32 px-8 flex flex-col items-center"
       >
         <div className="max-w-7xl w-full">
-          <h2 className="text-4xl md:text-7xl font-bold mb-20 uppercase tracking-tighter text-neutral-900">
+          <h2 className="text-4xl md:text-7xl font-bold mb-5 uppercase tracking-tighter text-neutral-900">
             {tGallery('title')} <span className="text-neutral-400">{tGallery('subtitle')}</span>
           </h2>
+          <h4 className="text-xl md:text-1xl font-medium mb-20 tracking-tighter text-neutral-900">
+            <span className="text-neutral-400">{tGallery('subtitle-2')}</span>
+          </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div className="gallery-item relative aspect-[3/4] w-full group overflow-hidden bg-neutral-100 rounded-sm">
 
@@ -160,6 +163,19 @@ export default function Home({
               <Link href="/gallery/xmas">
                 <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
                   <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('xmas')}</h3>
+                </div></Link>
+            </div>
+            <div className="gallery-item relative aspect-[3/4] md:mt-32 w-full group overflow-hidden bg-neutral-100 rounded-sm">
+              <Image
+                src="/student/1.jpg"
+                alt="Abstract"
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-1000 group-hover:scale-110"
+              />
+              <Link href="/gallery/student">
+                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
+                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('student')}</h3>
                 </div></Link>
             </div>
           </div>

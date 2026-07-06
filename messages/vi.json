@@ -5,7 +5,8 @@
   },
   "Gallery": {
     "title": "Concept",
-    "subtitle": "Chụp"
+    "subtitle": "Chụp",
+    "subtitle-2": "Click vào ảnh để xem thêm"
   },
   "Homepage": {
     "prewedding": "Pre-wedding",
@@ -13,7 +14,8 @@
     "aodai": "Áo dài",
     "portrait": "Chân dung",
     "xmas": "Giáng Sinh",
-    "couple": "Cặp đôi"
+    "couple": "Cặp đôi",
+    "student": "Học sinh"
   },
   "Collaborate": {
     "title": "Cùng nhau",

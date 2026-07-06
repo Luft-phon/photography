@@ -5,7 +5,8 @@
   },
   "Gallery": {
     "title": "Photo",
-    "subtitle": "Concept"
+    "subtitle": "Concept",
+    "subtitle-2": "Click each photo to see more"
   },
   "Homepage": {
     "prewedding": "Pre-wedding",
@@ -13,7 +14,8 @@
     "aodai": "Ao Dai",
     "portrait": "Portrait",
     "xmas": "Christmas",
-    "couple": "Couple"
+    "couple": "Couple",
+    "student": "Student"
   },
   "Collaborate": {
     "title": "Let's create",

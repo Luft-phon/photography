@@ -13,7 +13,7 @@ export const imagesData = [
     src: `/prewedding/${i + 1}${i + 1 === 15 || i + 1 === 16 ? '.JPG' : '.jpg'}`,
     category: "prewedding"
   })),
-  ...Array.from({ length: 9 }).map((_, i) => ({
+  ...Array.from({ length: 10 }).map((_, i) => ({
     src: `/muse/${i + 1}.jpg`,
     category: "muse"
   })),
@@ -28,6 +28,10 @@ export const imagesData = [
   ...Array.from({ length: 10 }).map((_, i) => ({
     src: `/couple/${i + 1}.jpg`,
     category: "couple"
+  })),
+  ...Array.from({ length: 21 }).map((_, i) => ({
+    src: `/student/${i + 1}.jpg`,
+    category: "student"
   }))
 ];
 
@@ -80,7 +84,7 @@ export default function GalleryGrid({ categoryFilter }: { categoryFilter: string
   return (
     <>
       <div ref={containerRef}>
-        <motion.div layout className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 px-4">
+        <motion.div layout className="columns-2 md:columns-2 lg:columns-3 gap-8 space-y-8 px-4">
           <AnimatePresence mode="popLayout">
             {filteredImages.map((img, idx) => (
               <motion.div
