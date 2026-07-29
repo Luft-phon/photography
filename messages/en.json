@@ -17,6 +17,17 @@
     "couple": "Couple",
     "student": "Student"
   },
+  "VideoSpotlight": {
+    "eyebrow": "Motion story",
+    "title": "Videographing Projects",
+    "subtitle": "Elegant cinematic studies framed with a soft editorial mood.",
+    "video1": "Beauty reel",
+    "video1Title": "Soft light portrait",
+    "video2": "Editorial film",
+    "video2Title": "Quiet romance",
+    "reel": "Reel",
+    "film": "Film"
+  },
   "Collaborate": {
     "title": "Let's create",
     "subtitle": "together",

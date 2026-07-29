@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { homeAssets } from "@/constants/homeAssets";
+import GalleryCard from "@/components/GalleryCard";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home({
@@ -18,51 +20,10 @@ export default function Home({
   const tGallery = useTranslations("Gallery");
   const tCollab = useTranslations("Collaborate");
   const tHomepage = useTranslations("Homepage");
+  const tVideo = useTranslations("VideoSpotlight");
   const containerRef = useRef<HTMLDivElement>(null);
   const heroTextRef = useRef<HTMLHeadingElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   const ctx = gsap.context(() => {
-  //     // Hero Text Animation
-  //     gsap.fromTo(
-  //       heroTextRef.current,
-  //       { y: 100, opacity: 0 },
-  //       { y: 0, opacity: 1, duration: 1.5, ease: "power4.out" }
-  //     );
-
-  //     // Scrollytelling image scale
-  //     gsap.to(".hero-image", {
-  //       scale: 1.5,
-  //       opacity: 0.5,
-  //       scrollTrigger: {
-  //         trigger: ".hero-section",
-  //         start: "top top",
-  //         end: "bottom top",
-  //         scrub: 1,
-  //       },
-  //     });
-
-  //     // Gallery Reveal
-  //     gsap.fromTo(
-  //       ".gallery-item",
-  //       { y: 100, opacity: 0 },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         stagger: 0.2,
-  //         scrollTrigger: {
-  //           trigger: galleryRef.current,
-  //           start: "top 80%",
-  //           end: "bottom 20%",
-  //           scrub: 1,
-  //         },
-  //       }
-  //     );
-  //   }, containerRef);
-
-  //   return () => ctx.revert();
-  // }, []);
 
   return (
     <main ref={containerRef} className="relative w-full">
@@ -70,7 +31,7 @@ export default function Home({
       <section className="hero-section relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/prewedding/1.jpg"
+            src={homeAssets.hero}
             alt="Photography Hero"
             fill
             className="object-cover hero-image"
@@ -98,89 +59,147 @@ export default function Home({
         </div>
       </section>
 
-      {/* Featured Works Scrollytelling Section */}
-      <section
-        ref={galleryRef}
-        className="relative w-full min-h-screen bg-white py-32 px-8 flex flex-col items-center"
-      >
-        <div className="max-w-7xl w-full">
-          <h2 className="text-4xl md:text-7xl font-bold mb-5 uppercase tracking-tighter text-neutral-900">
-            {tGallery('title')} <span className="text-neutral-400">{tGallery('subtitle')}</span>
-          </h2>
-          <h4 className="text-xl md:text-1xl font-medium mb-20 tracking-tighter text-neutral-900">
-            <span className="text-neutral-400">{tGallery('subtitle-2')}</span>
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="gallery-item relative aspect-[3/4] w-full group overflow-hidden bg-neutral-100 rounded-sm">
+      <section className="relative w-full bg-[linear-gradient(180deg,#fbf7f2_0%,#f7f2ec_100%)] px-8 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center md:mb-16">
+            <p className="mb-3 text-[10px] uppercase tracking-[0.45em] text-neutral-500 md:text-xs">
+              {tVideo('eyebrow')}
+            </p>
+            <h2 className="font-playfair text-4xl md:text-6xl text-neutral-900">
+              {tVideo('title')}
+            </h2>
+            <p className="mt-3 text-sm text-neutral-600 md:text-base">
+              {tVideo('subtitle')}
+            </p>
+          </div>
 
-              <Image
-                src="/muse/2.jpg"
-                alt="Portrait"
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-1000 group-hover:scale-110"
-              />
-              <Link href="/gallery/muse">
-                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
-                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('muse')}</h3>
-                </div></Link>
+          <div className="grid grid-cols-2 gap-3 md:gap-8 md:grid-cols-2">
+            <article className="group relative mx-auto aspect-[9/16] w-full max-w-[190px] overflow-hidden rounded-[24px] shadow-[0_20px_60px_rgba(17,17,17,0.08)] md:max-w-[320px] md:rounded-[30px]">
+              <div className="absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-black/35 to-transparent" />
 
-            </div>
-            <div className="gallery-item relative aspect-[3/4] md:mt-32 w-full group overflow-hidden bg-neutral-100 rounded-sm">
-              <Image
-                src="/prewedding/8.jpg"
-                alt="Landscape"
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-1000 group-hover:scale-110"
+              <video
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                src={homeAssets.video.one}
+                poster={homeAssets.poster.one}
+                muted
+                loop
+                autoPlay
+                playsInline
+                preload="metadata"
               />
-              <Link href="/gallery/prewedding">
-                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
-                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('prewedding')}</h3>
-                </div></Link>
-            </div>
-            <div className="gallery-item relative aspect-[3/4] w-full group overflow-hidden bg-neutral-100 rounded-sm">
-              <Image
-                src="/aodai/1.jpg"
-                alt="Nature"
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-1000 group-hover:scale-110"
+
+              <div className="absolute inset-x-0 bottom-0 z-10 p-6">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-white/80">
+                      {tVideo("video1")}
+                    </p>
+
+                    <h3 className="mt-2 font-playfair text-2xl text-white">
+                      {tVideo("video1Title")}
+                    </h3>
+                  </div>
+
+                  <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-white/90">
+                    {tVideo("film")}
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article className="group relative mx-auto aspect-[9/16] w-full max-w-[190px] overflow-hidden rounded-[24px] shadow-[0_20px_60px_rgba(17,17,17,0.08)] md:max-w-[320px] md:rounded-[30px]">
+              <div className="absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-black/35 to-transparent" />
+
+              <video
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                src={homeAssets.video.two}
+                poster={homeAssets.poster.two}
+                muted
+                loop
+                autoPlay
+                playsInline
+                preload="metadata"
               />
-              <Link href="/gallery/aodai">
-                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
-                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('aodai')}</h3>
-                </div></Link>
-            </div>
-            <div className="gallery-item relative aspect-[3/4] md:mt-32 w-full group overflow-hidden bg-neutral-100 rounded-sm">
-              <Image
-                src="/xmas/8.jpg"
-                alt="Abstract"
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-1000 group-hover:scale-110"
-              />
-              <Link href="/gallery/xmas">
-                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
-                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('xmas')}</h3>
-                </div></Link>
-            </div>
-            <div className="gallery-item relative aspect-[3/4] md:mt-32 w-full group overflow-hidden bg-neutral-100 rounded-sm">
-              <Image
-                src="/student/1.jpg"
-                alt="Abstract"
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-1000 group-hover:scale-110"
-              />
-              <Link href="/gallery/student">
-                <div className="absolute inset-0 flex items-start p-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 bg-transparent md:bg-white/0 md:group-hover:bg-white/60 transition-all duration-500">
-                  <h3 className="text-3xl font-medium text-neutral-900">{tHomepage('student')}</h3>
-                </div></Link>
-            </div>
+
+              <div className="absolute inset-x-0 bottom-0 z-10 p-6">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-white/80">
+                      {tVideo("video2")}
+                    </p>
+
+                    <h3 className="mt-2 font-playfair text-2xl text-white">
+                      {tVideo("video2Title")}
+                    </h3>
+                  </div>
+
+                  <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-white/90">
+                    {tVideo("film")}
+                  </span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
+
+      {/* Featured Works Scrollytelling Section */}
+      <section
+  ref={galleryRef}
+  className="relative flex min-h-screen w-full flex-col items-center bg-white px-4 py-24 md:px-8 md:py-32"
+>
+  <div className="w-full max-w-7xl">
+    <h2 className="mb-5 text-4xl font-bold uppercase tracking-tighter text-neutral-900 md:text-7xl">
+      {tGallery("title")}{" "}
+      <span className="text-neutral-400">
+        {tGallery("subtitle")}
+      </span>
+    </h2>
+
+    <h4 className="mb-16 text-xl font-medium tracking-tighter text-neutral-900 md:mb-20">
+      <span className="text-neutral-400">
+        {tGallery("subtitle-2")}
+      </span>
+    </h4>
+
+    <div className="grid grid-cols-2 justify-items-center gap-4 md:gap-16">
+      <GalleryCard
+        href="/gallery/muse"
+        src="/muse/2.jpg"
+        alt="Muse"
+        title={tHomepage("muse")}
+      />
+
+      <GalleryCard
+        href="/gallery/prewedding"
+        src="/prewedding/8.jpg"
+        alt="Prewedding"
+        title={tHomepage("prewedding")}
+      />
+
+      <GalleryCard
+        href="/gallery/aodai"
+        src="/aodai/1.jpg"
+        alt="Áo dài"
+        title={tHomepage("aodai")}
+      />
+
+      <GalleryCard
+        href="/gallery/xmas"
+        src="/xmas/8.jpg"
+        alt="Xmas"
+        title={tHomepage("xmas")}
+      />
+
+      <GalleryCard
+        href="/gallery/student"
+        src="/student/1.jpg"
+        alt="Student"
+        title={tHomepage("student")}
+      />
+    </div>
+  </div>
+</section>
 
       {/* Collaborate Section */}
       <section className="h-[80vh] w-full bg-neutral-50 flex flex-col items-center justify-center text-center px-4">
